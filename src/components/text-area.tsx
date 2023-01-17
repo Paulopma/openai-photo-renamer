@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState } from 'react'
 
 export default function TextArea() {
-  const [textInput, setTextInput] = useState('');
+  const [textInput, setTextInput] = useState('')
 
   return (
     <textarea
