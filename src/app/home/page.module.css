@@ -1,0 +1,207 @@
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(89.9deg, #323232 -86.58%, #000000 280.1%);
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .leftSection {
+    width: 100%;
+  }
+
+  .rightSection {
+    width: 100% !important;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .textArea {
+    width: 100% !important;
+  }
+
+  .response {
+    width: 100% !important;
+  }
+}
+
+.rightSection {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 40%;
+}
+
+.textArea {
+  width: 90%;
+  height: 300px;
+  left: 14px;
+  top: 203px;
+
+  padding: 15px;
+
+  background: #484848;
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+}
+
+.button {
+  background: linear-gradient(89.9deg, #ff0000 -86.58%, #1b1da3 280.1%);
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 15px 70px;
+  border: none;
+  margin-top: 10px;
+}
+
+.button:hover {
+  filter: brightness(1.2);
+}
+
+.response {
+  position: relative;
+  text-align: left;
+  width: 90%;
+  height: 400px;
+  margin-top: 60px;
+  padding: 20px;
+
+  color: #e9e9e9;
+  border: solid 5px #ff0000;
+  border-radius: 10px;
+  z-index: 1;
+  /* background: linear-gradient(89.9deg, #ff0000 -86.58%, #1b1da3 280.1%); */
+  overflow: auto;
+}
+
+/* .insideSquare {
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  position: absolute;
+  z-index: -1;
+  border-radius: 10px;
+  background-color: #0a0a0a;
+  overflow: auto;
+} */
+
+.response button {
+  white-space: nowrap;
+  transition: 0.1s;
+  cursor: pointer;
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 18px;
+}
+
+.namesContainer:hover {
+  margin-bottom: 20px;
+  transition: 0.1s;
+  font-weight: bold;
+}
+
+.namesContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  transition: 0.1s;
+  font-weight: bold;
+}
+
+.rightSection p {
+  font-size: 25px;
+}
+
+.imagesContainer {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .imagesContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .image {
+    width: 45% !important;
+    height: 200px !important;
+  }
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  object-fit: contain
+}
+
+/* LOADER */
+.loadingContainer {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 90px;
+  height: 90px;
+}
+
+.ldsFacebook {
+  display: inline-block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+
+.ldsFacebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: linear-gradient(89.9deg, #be3c58 -86.58%, #696AAD 280.1%);
+  animation: ldsFacebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.ldsFacebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+
+.ldsFacebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+
+.ldsFacebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+
+@keyframes ldsFacebook {
+  0% {
+    top: 8px;
+    height: 84px;
+  }
+
+  50%,
+  100% {
+    top: 24px;
+    height: 42px;
+  }
+}
