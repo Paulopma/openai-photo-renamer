@@ -17,7 +17,7 @@ export default async function handler(
 
   const response = await openai.createCompletion({
     model: 'text-davinci-003',
-    prompt: `filtre apenas os nomes de pessoas dessa conversa, seguido da idade, localização (se houver), e telefone (se houver), excluindo os rementes. Seguindo esse padrão: nome - idade anos - localização - telefone, MAS POR FAVOR, NUNCA TERMINE COM UM TRAÇO AO FINAL DE CADA LINHA \n\n ${textInput}`,
+    prompt: `filtre apenas os nomes de pessoas dessa conversa, seguido da idade, excluindo os rementes. Seguindo esse padrão: nome - idade anos \n\n ${textInput}`,
     temperature: 0.9,
     max_tokens: 300,
     top_p: 1,
